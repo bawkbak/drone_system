@@ -1,0 +1,18 @@
+[submodule "catkin_ws/src/drone_state_estimation"]
+	path = catkin_ws/src/drone_state_estimation
+	url = git@github.com:bawkbak/drone_state_estimation.git
+[submodule "catkin_ws/src/PX4-Avoidance"]
+	path = catkin_ws/src/PX4-Avoidance
+	url = git@github.com:ARG-NCTU/PX4-Avoidance.git
+[submodule "catkin_ws/src/drone_navigation"]
+	path = catkin_ws/src/drone_navigation
+	url = git@github.com:bawkbak/drone_navigation.git
+[submodule "catkin_ws/src/mavros_command"]
+	path = catkin_ws/src/mavros_command
+	url = git@github.com:bawkbak/mavros_command.git
+[submodule "catkin_ws/src/behavior_tree"]
+	path = catkin_ws/src/behavior_tree
+	url = git@github.com:ARG-NCTU/behavior_tree.git
+[submodule "catkin_ws/src/behavior_tree_msgs"]
+	path = catkin_ws/src/behavior_tree_msgs
+	url = git@github.com:ARG-NCTU/behavior_tree_msgs.git
