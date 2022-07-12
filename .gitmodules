@@ -16,3 +16,6 @@
 [submodule "catkin_ws/src/behavior_tree_msgs"]
 	path = catkin_ws/src/behavior_tree_msgs
 	url = git@github.com:ARG-NCTU/behavior_tree_msgs.git
+[submodule "catkin_ws/src/drone_mavros"]
+	path = catkin_ws/src/drone_mavros
+	url = git@github.com:bawkbak/drone_mavros.git
