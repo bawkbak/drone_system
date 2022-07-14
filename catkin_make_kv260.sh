@@ -1,4 +1,5 @@
 catkin build -w ~/drone_system/catkin_ws \
+    -j2 \
     behavior_tree_msgs \
     behavior_tree \
     ros_tsp \
