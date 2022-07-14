@@ -8,7 +8,7 @@ ENV ROS_DISTRO melodic
 ###################################### user #####################################
 
 ENV SHELL=/bin/bash \
-    USER=argnctu \
+    USER=bawkbak \
     UID=1000 \
     LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8
@@ -117,9 +117,10 @@ RUN apt-get -o Acquire::ForceIPv4=true update && apt-get -yq dist-upgrade \
 RUN wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 RUN chmod +x install_geographiclib_datasets.sh
 RUN sudo ./install_geographiclib_datasets.sh
-RUN pip install --user toml \
-    python_tsp
-
+# RUN pip3 install -U \
+#     wrapt \
+#     python-tsp \
+#     toml
 ##################################### setting ###################################################
 RUN chown -R ${USER}:${USER} ${HOME}/
 RUN echo "${USER} ALL=(ALL)  ALL" >> /etc/sudoers
