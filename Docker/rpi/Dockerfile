@@ -36,7 +36,7 @@ RUN apt-get install -y --allow-unauthenticated \
     libopencv-dev libhdf5-serial-dev libgflags-dev libgoogle-glog-dev \
     liblmdb-dev libxslt-dev libxml2-dev libgraphviz-dev protobuf-compiler \
     byacc swig3.0 graphviz gfortran python-dev python-numpy python-pip python3 \
-    python3-dev python3-numpy python3-scipy python3-yaml python3-nose python3-tk python3-pip 
+    python3-dev python3-numpy python3-scipy python3-yaml python3-nose python3-tk python3-pip byobu
 
 # Do clean jobs
 RUN sudo apt-get clean && rm -rf /var/lib/apt/lists/*
