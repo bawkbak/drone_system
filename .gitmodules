@@ -7,18 +7,18 @@
 [submodule "catkin_ws/src/drone_navigation"]
 	path = catkin_ws/src/drone_navigation
 	url = git@github.com:bawkbak/drone_navigation.git
-[submodule "catkin_ws/src/mavros_command"]
-	path = catkin_ws/src/mavros_command
-	url = git@github.com:bawkbak/mavros_command.git
+[submodule "catkin_ws/src/drone_mavros_cmd"]
+	path = catkin_ws/src/drone_mavros_cmd
+	url = git@github.com:bawkbak/drone_mavros_cmd.git
 [submodule "catkin_ws/src/behavior_tree"]
 	path = catkin_ws/src/behavior_tree
 	url = git@github.com:ARG-NCTU/behavior_tree.git
 [submodule "catkin_ws/src/behavior_tree_msgs"]
 	path = catkin_ws/src/behavior_tree_msgs
 	url = git@github.com:ARG-NCTU/behavior_tree_msgs.git
-[submodule "catkin_ws/src/drone_mavros"]
-	path = catkin_ws/src/drone_mavros
-	url = git@github.com:bawkbak/drone_mavros.git
+[submodule "catkin_ws/src/drone_setup"]
+	path = catkin_ws/src/drone_setup
+	url = git@github.com:bawkbak/drone_setup.git
 [submodule "catkin_ws/src/ros_tsp"]
 	path = catkin_ws/src/ros_tsp
 	url = git@github.com:bawkbak/ros_tsp.git
