@@ -25,3 +25,9 @@
 [submodule "catkin_ws/src/zed-ros-wrapper"]
 	path = catkin_ws/src/zed-ros-wrapper
 	url = git@github.com:stereolabs/zed-ros-wrapper.git
+[submodule "catkin_ws/src/realsense_ros"]
+	path = catkin_ws/src/realsense_ros
+	url = git@github.com:IntelRealSense/realsense-ros.git
+[submodule "catkin_ws/src/apriltag_ros"]
+	path = catkin_ws/src/apriltag_ros
+	url = git@github.com:AprilRobotics/apriltag_ros.git
