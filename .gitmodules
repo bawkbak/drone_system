@@ -40,3 +40,6 @@
 [submodule "catkin_ws/src/pozyx_ros"]
 	path = catkin_ws/src/pozyx_ros
 	url = git@github.com:ARG-NCTU/pozyx_uwb.git
+[submodule "catkin_ws/src/drone_location_transfer"]
+	path = catkin_ws/src/drone_location_transfer
+	url = git@github.com:bawkbak/drone_location_transfer.git
