@@ -22,9 +22,6 @@
 [submodule "catkin_ws/src/ros_tsp"]
 	path = catkin_ws/src/ros_tsp
 	url = git@github.com:bawkbak/ros_tsp.git
-[submodule "catkin_ws/src/zed-ros-wrapper"]
-	path = catkin_ws/src/zed-ros-wrapper
-	url = git@github.com:stereolabs/zed-ros-wrapper.git
 [submodule "catkin_ws/src/realsense_ros"]
 	path = catkin_ws/src/realsense_ros
 	url = git@github.com:IntelRealSense/realsense-ros.git
