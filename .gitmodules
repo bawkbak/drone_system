@@ -31,3 +31,6 @@
 [submodule "catkin_ws/src/apriltag_ros"]
 	path = catkin_ws/src/apriltag_ros
 	url = git@github.com:AprilRobotics/apriltag_ros.git
+[submodule "catkin_ws/src/drone_resilient_height"]
+	path = catkin_ws/src/drone_resilient_height
+	url = git@github.com:bawkbak/drone_resilient_height.git
