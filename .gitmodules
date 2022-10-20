@@ -34,3 +34,6 @@
 [submodule "catkin_ws/src/drone_resilient_height"]
 	path = catkin_ws/src/drone_resilient_height
 	url = git@github.com:bawkbak/drone_resilient_height.git
+[submodule "catkin_ws/src/zed_ros_wrapper"]
+	path = catkin_ws/src/zed_ros_wrapper
+	url = git@github.com:bawkbak/zed_ros_wrapper.git
