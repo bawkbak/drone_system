@@ -37,3 +37,6 @@
 [submodule "catkin_ws/src/zed_ros_wrapper"]
 	path = catkin_ws/src/zed_ros_wrapper
 	url = git@github.com:bawkbak/zed_ros_wrapper.git
+[submodule "catkin_ws/src/pozyx_ros"]
+	path = catkin_ws/src/pozyx_ros
+	url = git@github.com:ARG-NCTU/pozyx_uwb.git
