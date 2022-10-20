@@ -1,0 +1,17 @@
+<launch>
+    <group ns="zedm_forward">
+        <include file="$(find drone_setup)/launch/apriltag.launch">
+            <arg name="node_namespace" default="apriltag" />
+            <arg name="camera_name" default="zed_node" />
+            <arg name="image_topic" default="rgb/image_rect_color" />
+        </include>
+    </group>
+
+    <group ns="d435_backward">
+        <include file="$(find drone_setup)/launch/apriltag.launch">
+            <arg name="node_namespace" default="apriltag" />
+            <arg name="camera_name" default="color" />
+            <arg name="image_topic" default="image_raw" />
+        </include>
+    </group>
+</launch>

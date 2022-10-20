@@ -1,0 +1,10 @@
+<launch>
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+        <arg name="camera"        default="d435_backward" />
+    </include>  
+
+    <include file="$(find zed_wrapper)/launch/zedm.launch">
+        <arg name="camera_name"   default="zedm_forward" />
+        <arg name="base_frame"    default="zedm_forward_link" />
+    </include>
+</launch>
