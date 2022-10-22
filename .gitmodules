@@ -40,3 +40,6 @@
 [submodule "catkin_ws/src/drone_location_transfer"]
 	path = catkin_ws/src/drone_location_transfer
 	url = git@github.com:bawkbak/drone_location_transfer.git
+[submodule "catkin_ws/src/behavior_tree_extra"]
+	path = catkin_ws/src/behavior_tree_extra
+	url = git@github.com:bawkbak/behavior_tree_extra.git
