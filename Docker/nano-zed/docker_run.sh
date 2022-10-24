@@ -22,20 +22,23 @@ if [ ! -f $XAUTH ]; then
     echo "[$XAUTH] was not properly created. Exiting..."
    exit 1
 fi
-
+# argnctu/robotx2022:nano-zedm-d435
+# bawkbak/robotx2022:drone_nano
 docker run -it \
     -e DISPLAY=$DISPLAY \
     -e XAUTHORITY=$XAUTH \
     -v "$XAUTH:$XAUTH" \
-    -v "/home/$USER/drone_system:/home/bawkbak/drone_system" \
+    -v "/home/$USER/drone_system:/home/robotx/drone_system" \
     -v "/tmp/.X11-unix:/tmp/.X11-unix" \
     -v "/etc/localtime:/etc/localtime:ro" \
     -v "/dev:/dev" \
-    --workdir "/home/bawkbak/drone_system" \
+    --workdir "/home/robotx/drone_system" \
     --user "root:root" \
-    --name bawkbak \
+    --name robotx \
     --network host \
+    --gpus all \
     --rm \
     --privileged \
     bawkbak/robotx2022:drone_nano \
     bash 
+
