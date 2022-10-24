@@ -1,0 +1,42 @@
+cmd "01_core" {
+    exec = "roscore";
+    host = "nx01";
+}
+
+cmd "02_camera" {
+    exec = "roslaunch drone_setup camera.launch";
+    host = "nx01";
+}
+
+cmd "03_tag_detector" {
+    exec = "roslaunch drone_setup drone_apriltag.launch";
+    host = "nx01";
+}
+
+cmd "04_mavros" {
+    exec = "roslaunch drone_setup mavros.launch";
+    host = "nx01";
+}
+
+cmd "05_tf" {
+    exec = "roslaunch drone_setup drone_tf.launch";
+    host = "nx01";
+}
+
+cmd "06_height" {
+    exec = "roslaunch drone_resilient_height height_estimator.launch";
+    host = "nx01";
+}
+script "basic" {
+    start cmd "01_core" wait "running";
+    wait ms 2000;
+    start cmd "02_camera";
+    wait ms 500;
+    start cmd "03_tag_detector";
+    wait ms 500;
+    start cmd "04_mavros";
+    wait ms 500;
+    start cmd "05_tf";
+    wait ms 500;
+    start group "06_height" wait "running";
+}
