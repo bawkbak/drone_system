@@ -1,42 +1,85 @@
-cmd "01_core" {
+cmd "01_roscore" {
     exec = "roscore";
     host = "nx01";
 }
 
-cmd "02_camera" {
-    exec = "roslaunch drone_setup camera.launch";
-    host = "nx01";
+group "02_system" {
+    cmd "zedm" {
+        exec = "roslaunch drone_setup zedm.launch";
+        host = "nx01";
+    }
+    cmd "d435" {
+        exec = "roslaunch drone_setup d435.launch";
+        host = "nx01";
+    }
+    cmd "mavros_onboard" {
+        exec = "roslaunch drone_setup mavros_onboard.launch";
+        host = "nx01";
+    }
+    cmd "tf" {
+        exec = "roslaunch drone_setup drone_tf.launch";
+        host = "nx01";
+    }
+    cmd "location" {
+        exec = "roslaunch drone_location_transfer location_transfer.launch";
+        host = "nx01";
+    }  
 }
 
-cmd "03_tag_detector" {
-    exec = "roslaunch drone_setup drone_apriltag.launch";
-    host = "nx01";
+group "03_height_resilient" {
+    cmd "apriltag" {
+        exec = "roslaunch drone_setup drone_apriltag.launch";
+        host = "nx01";
+    }
+    cmd "pozyx" {
+        exec = "roslaunch pozyx_ros wamv.launch";
+        host = "nx01";
+    }
+    cmd "height_estimator" {
+        exec = "roslaunch drone_resilient_height height_estimator.launch";
+        host = "nx01";
+    }
 }
 
-cmd "04_mavros" {
-    exec = "roslaunch drone_setup mavros.launch";
-    host = "nx01";
+group "04_navigation" {
+    cmd "navigation_server" {
+        exec = "roslaunch drone_navigation navigation_manager.launch";
+        host = "nx01";
+    }
+    cmd "waypoint_goal" {
+        exec = "roslaunch drone_navigation waypoint_following.launch";
+        host = "nx01";
+    }
+    cmd "explore_circular" {
+        exec = "roslaunch drone_navigation explore_circular.launch";
+        host = "nx01";
+    }
+    cmd "explore_forward" {
+        exec = "roslaunch drone_navigation explore_forward.launch";
+        host = "nx01";
+    }
 }
 
-cmd "05_tf" {
-    exec = "roslaunch drone_setup drone_tf.launch";
-    host = "nx01";
+group "05_behavior_tree" {
+    cmd "tree_rqt" {
+        exec = "roslaunch behavior_tree behavior_tree_rqt.launch";
+        host = "nx01";
+    }
+    cmd "tree_server" {
+        exec = "roslaunch behavior_tree behavior_tree.launch tree:=waypoint_physic.tree";
+        host = "nx01";
+    }
+    cmd "mavros_condition" {
+        exec = "roslaunch drone_state_estimation state_estimation.launch";
+        host = "nx01";
+    }
+    cmd "mavros_action" {
+        exec = "roslaunch mavros_command mavros_controller.launch";
+        host = "nx01";
+    }
 }
 
-cmd "06_height" {
-    exec = "roslaunch drone_resilient_height height_estimator.launch";
-    host = "nx01";
-}
+
 script "basic" {
-    start cmd "01_core" wait "running";
-    wait ms 2000;
-    start cmd "02_camera";
-    wait ms 500;
-    start cmd "03_tag_detector";
-    wait ms 500;
-    start cmd "04_mavros";
-    wait ms 500;
-    start cmd "05_tf";
-    wait ms 500;
-    start group "06_height" wait "running";
+    start cmd "01_roscore" wait "running";
 }
