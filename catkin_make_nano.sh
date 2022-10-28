@@ -6,6 +6,10 @@ catkin build -w ~/drone_system/catkin_ws \
     behavior_tree_extra \
     ros_tsp \
     drone_setup \
+    drone_navigation \
     drone_state_estimation \
     drone_resilient_height \
-    drone_location_transfer 
+    drone_location_transfer \
+    realsense2_camera \
+    zed_wrapper \
+    apriltag_ros
