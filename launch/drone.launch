@@ -1,7 +1,0 @@
-<launch>
-        <include file="$(find drone_setup)/launch/camera.launch"/>
-        <include file="$(find drone_setup)/launch/drone_apriltag.launch"/>
-        <include file="$(find drone_setup)/launch/mavros_telem.launch"/>
-        <include file="$(find drone_setup)/launch/drone_tf.launch"/>
-        <include file="$(find drone_resilient_height)/launch/height_estimator.launch"/>
-</launch>
