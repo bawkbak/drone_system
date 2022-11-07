@@ -43,3 +43,9 @@
 [submodule "catkin_ws/src/zed-ros-wrapper"]
 	path = catkin_ws/src/zed-ros-wrapper
 	url = git@github.com:bawkbak/zed_ros_wrapper.git
+[submodule "catkin_ws/src/darknet_ros"]
+	path = catkin_ws/src/darknet_ros
+	url = git@github.com:bawkbak/darknet_ros_v4.git
+[submodule "catkin_ws/src/drone_perception"]
+	path = catkin_ws/src/drone_perception
+	url = git@github.com:bawkbak/drone_perception.git
