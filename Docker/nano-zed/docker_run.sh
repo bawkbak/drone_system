@@ -31,6 +31,7 @@ docker run -it \
     -v "/home/$USER/drone_system:/home/robotx/drone_system" \
     -v "/tmp/.X11-unix:/tmp/.X11-unix" \
     -v "/etc/localtime:/etc/localtime:ro" \
+    -v "/home/$USER/drone_system/zed_settings/:/usr/local/zed/settings/" \
     -v "/dev:/dev" \
     --workdir "/home/robotx/drone_system" \
     --user "root:root" \
@@ -39,6 +40,6 @@ docker run -it \
     --gpus all \
     --rm \
     --privileged \
-    bawkbak/robotx2022:drone_nano \
+    bawkbak/robotx2022:drone_nano_py \
     bash 
 

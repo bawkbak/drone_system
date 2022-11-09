@@ -1,4 +1,4 @@
-FROM stereolabs/zed:3.8-tools-devel-l4t-r32.7
+FROM stereolabs/zed:3.8-py-devel-l4t-r32.7
 ############################ USER ###############################
 
 # setup environment
