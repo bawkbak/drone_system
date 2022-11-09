@@ -49,3 +49,6 @@
 [submodule "catkin_ws/src/drone_perception"]
 	path = catkin_ws/src/drone_perception
 	url = git@github.com:bawkbak/drone_perception.git
+[submodule "catkin_ws/src/drone_heartbeat"]
+	path = catkin_ws/src/drone_heartbeat
+	url = git@github.com:bawkbak/drone_heartbeat.git

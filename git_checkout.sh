@@ -80,6 +80,11 @@ echo -e " Ʌ Ʌ Ʌ Ʌ Ʌ\n-----------\ndarknet_ros\n V V V V V"
 cd $BASEDIR/catkin_ws/src/darknet_ros
 git checkout master
 
+# drone_heartbeat
+echo -e " Ʌ Ʌ Ʌ Ʌ Ʌ\n-----------\ndrone_heartbeat\n V V V V V"
+cd $BASEDIR/catkin_ws/src/drone_heartbeat
+git checkout master
+
 echo -e " Ʌ Ʌ Ʌ Ʌ Ʌ"
 cd $BASEDIR
 
