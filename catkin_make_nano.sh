@@ -13,4 +13,7 @@ catkin build -w ~/drone_system/catkin_ws \
     realsense2_camera \
     zed_wrapper \
     apriltag_ros \
-    pozyx_ros 
+    pozyx_ros \
+    drone_perception \
+    darknet_ros \
+    drone_heartbeat
